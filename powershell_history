@@ -16,4 +16,7 @@ $history = Get-Content $historyFile
 $customTitle = "minikayicuh x kennedy"
 
 # GridView'i açıp durmasını sağla
-$history | Select-Object @{Name="Command"; Expression={$_}} | Out-GridView -Title $customTitle -Wait
+$history | Select-Object @{Name="Command"; Expression={$_}} | Out-GridView -Title $customTitle
+
+# Kullanıcının GridView penceresini kapatmasını beklemek için bir bekleme komutu
+Start-Sleep -Seconds 9999
